@@ -2,12 +2,18 @@
 
 ![img](https://img.shields.io/github/issues/ethmtrgt/url_shortener)
 ![img](https://img.shields.io/github/last-commit/ethmtrgt/url_shortener)
+![Django](https://img.shields.io/badge/django-%23092E20.svg?style=flat&logo=django&logoColor=white)
 ![GitHub Repo stars](https://img.shields.io/github/stars/ethmtrgt/url_shortener?style=social)
 
 <br>
 
+## What is that?
+Yet another url shortener built with Django framework.
+
+<br>
+
 ## HOW TO RUN?
-### 1. Create Virtual Environment
+### 1. Virtual Environment
 First create a virtual environment by running this command.
 ```
 $ python -m venv .venv
@@ -19,7 +25,17 @@ Add your `SECRET_KEY` to the end of the `.venv/bin/activate` file.
 export SECRET_KEY="ThiSIsMyDjanGoSeCreTKey"
 ```
 
-### 2. Migrate
+Activate your virtual environment
+```
+$ source .venv/bin/activate
+```
+
+Install dependencies via pip
+```
+$ pip install -r requirements.txt
+```
+
+### 2. Migrations
 Django can create migrations for you. Simply run these commands to create migrations and migrate:
 ```
 $ python manage.py makemigrations shortener
@@ -40,3 +56,8 @@ You may access the server at http://localhost:8000/ by default.
 - Make responsive
 - Url previews and Twitter summary cards support
 - Improve analytics
+
+<br>
+
+## Support
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S76FXRP)
