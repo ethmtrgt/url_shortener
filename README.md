@@ -1,5 +1,6 @@
 # Simple Url Shortener
 
+![img](https://visitor-badge.laobi.icu/badge?page_id=ethmtrgt.url_shortener)
 ![img](https://img.shields.io/github/issues/ethmtrgt/url_shortener)
 ![img](https://img.shields.io/github/last-commit/ethmtrgt/url_shortener)
 ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=flat&logo=django&logoColor=white)
