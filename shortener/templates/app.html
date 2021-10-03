@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}App{% endblock title %}
+
+{% block content %}
+<div id="main">
+    <div class="card">
+        <h2>Simple URL Shortener</h2>
+    </div>
+
+    <div id="app" class="card">
+        <form method="POST" action="/shorten">
+            {% csrf_token %}
+            <div class="input-container">
+                <label>
+                    Alias
+                    {{ form.alias }}
+                </label>
+            </div>
+
+            <div class="input-container">
+                <label>
+                    Long URL
+                    {{ form.long_url }}
+                </label>
+            </div>
+
+            <div class="input-container">
+                <input type="submit" value="Shorten!">
+            </div>
+        </form>
+    </div>
+
+    <div class="card">
+        <h3>Created by <a href="//github.com/ethmtrgt">@ethmtrgt</a></h3>
+    </div>
+</div>
+{% endblock content %}
