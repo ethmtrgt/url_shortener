@@ -12,6 +12,11 @@ Yet another url shortener built with Django framework.
 
 <br>
 
+## Preview
+![image](https://user-images.githubusercontent.com/48857416/135764138-cc041e97-5c0f-455a-ac23-8a37ec26ec2a.png)
+
+<br>
+
 ## HOW TO RUN?
 ### 1. Virtual Environment
 First create a virtual environment by running this command.
