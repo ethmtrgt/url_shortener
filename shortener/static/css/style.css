@@ -18,7 +18,7 @@ body {
 
 h2, h3 {
     color: #333333;
-    margin: 8px 0;
+    margin: 1rem 0;
 }
 
 h3 {
@@ -38,33 +38,43 @@ a {
     background-color: #00b5d1;
 }
 
-.card {
-    width: 400px;
-    height: auto;
-    margin: 12px 0 0 0;
-    padding: 12px;
-    background-color: #fafafa;
-    border-radius: 12px;
-}
-
-.input-container {
-    margin: 16px 0;
+.input-container * {
+    margin: 0.2rem;
 }
 
 .input-container input {
-    display: block;
     width: 100%;
-    height: 32px;
-    margin: 8px 0 0 0;
+    height: 2rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     background-color: #dbdbdb;
 }
 
 .input-container input[type=submit] {
-    margin: 0 auto;
-    width: 50%;
-    height: 36px;
+    width: 100%;
+    height: 2.1rem;
     background-color: #ff5c58;
+    color: #fafafa;
     font-weight: 600;
 }
+
+
+
+.card {
+    width: calc(100% - 3rem);
+    padding: 1rem;
+    margin: 1rem auto;
+    background-color: #fafafa;
+    border-radius: 1rem;
+}
+
+.card h2 {
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .card {
+        width: 450px;
+    }
+}
+  
