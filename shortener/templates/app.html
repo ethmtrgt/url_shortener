@@ -3,13 +3,17 @@
 {% block title %}App{% endblock title %}
 
 {% block content %}
+
+{% load static %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <div id="main">
     <div class="card">
         <h2>Simple URL Shortener</h2>
     </div>
 
     <div id="app" class="card">
-        <form method="POST" action="/shorten">
+        <form onsubmit="formSubmit(this)" method="POST" action="/shorten">
             {% csrf_token %}
             <div class="input-container">
                 <label>
@@ -31,8 +35,16 @@
         </form>
     </div>
 
+    <div id="output" class="card">
+        <h3>Shortened URL</h3>
+        <a href=""></a>
+    </div>
+    
+
     <div class="card">
         <h3>Created by <a href="//github.com/ethmtrgt">@ethmtrgt</a></h3>
     </div>
 </div>
+
+<script src="{% static 'js/script.js' %}"></script>
 {% endblock content %}
