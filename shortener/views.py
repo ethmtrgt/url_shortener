@@ -1,4 +1,5 @@
 from django.http.response import Http404
+from django.db.utils import IntegrityError
 from django.shortcuts import render
 from django.http import JsonResponse, HttpResponseRedirect
 from .models import ShortUrl
@@ -43,16 +44,21 @@ def shorten_url(request):
             long_url = form.cleaned_data.get('long_url')
             if not alias:
                 alias = create_alias()
-            short = ShortUrl(alias=alias, long_url=long_url)
-            short.save()
-            return JsonResponse({
-                'status': 'success',
-                'message': 'Successfully shortened!',
-                'result': alias
-            })
-        else:
-            return JsonResponse({
-                'status': 'error',
-                'message': 'Invalid fields!'
-            })
+            try:
+                short = ShortUrl(alias=alias, long_url=long_url)
+                short.save()
+                return JsonResponse({
+                    'status': 'success',
+                    'message': 'Successfully shortened!',
+                    'result': alias
+                })
+            except IntegrityError:
+                return JsonResponse({
+                    'status': 'error',
+                    'message': 'Given alias already exists.'
+                })
+        return JsonResponse({
+            'status': 'error',
+            'message': 'Invalid fields!'
+        })
     return HttpResponseRedirect('/')
