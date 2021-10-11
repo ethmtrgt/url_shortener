@@ -58,8 +58,6 @@ a {
     font-weight: 600;
 }
 
-
-
 .card {
     width: calc(100% - 3rem);
     padding: 1rem;
@@ -77,4 +75,3 @@ a {
         width: 450px;
     }
 }
-  
