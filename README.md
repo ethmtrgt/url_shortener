@@ -14,7 +14,7 @@ Yet another url shortener built with Django framework.
 <br>
 
 ## Preview
-![image](https://user-images.githubusercontent.com/48857416/135764138-cc041e97-5c0f-455a-ac23-8a37ec26ec2a.png)
+![image](https://user-images.githubusercontent.com/48857416/136834823-07ae633a-94f5-439a-bb06-c2a5c5e1bed9.png)
 
 <br>
 
