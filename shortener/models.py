@@ -9,3 +9,6 @@ class ShortUrl(models.Model):
 
     def __str__(self):
         return f'ID: {self.id}, Alias: {self.alias}, {self.visits} visits.'
+    class Meta:
+        verbose_name = "link"
+        verbose_name_plural = 'Most viewed links'
