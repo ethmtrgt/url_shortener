@@ -58,8 +58,9 @@ You may access the server at http://localhost:8000/ by default.
 <br>
 
 ## TODO:
-- Add AJAX to front end
-- Make responsive
+- ~~Improve docs~~ [orama254](https://github.com/orama254)
+- ~~Add AJAX to front end~~ [GrbavaCigla](https://github.com/GrbavaCigla)
+- ~~Make responsive~~ [ashvathnarayanan](https://github.com/ashvathnarayanan)
 - Url previews and Twitter summary cards support
 - Improve analytics
 
