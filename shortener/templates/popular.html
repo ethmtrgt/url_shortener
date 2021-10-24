@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Popular Links{% endblock title %}
+
+{% block content %}
+<div id="main">
+    <div class="card">
+        <h2>Popular Links</h2>
+    </div>
+
+    <div class="card">
+        {% for idx, short_url in short_urls %}
+        
+        <div class="row">
+            <div>#{{ idx }}</div>
+            <a href="{{ short_url.long_url }}">{{ short_url.alias }}</a>
+            <div>{{ short_url.visits }}</div>
+        </div>
+
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
