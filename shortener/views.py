@@ -31,6 +31,10 @@ def redirect_view(request, alias):
         pass
     return HttpResponseRedirect('/')
 
+def popular_links_view(request):
+    short_urls = ShortUrl.objects.order_by('-visits')[0:10]
+    return render(request, 'popular.html', {'short_urls': enumerate(short_urls, 1)})
+
 def shorten_url(request):
     """
     Shorten given URL with an alias.
