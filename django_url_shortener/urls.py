@@ -17,12 +17,12 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, re_path
 from django.views.static import serve
-from shortener.views import home_view, redirect_view, popular_links_view, shorten_url
+from shortener import view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_view),
-    path('shorten', shorten_url),
-    path('popular/', popular_links_view),
-    path('<str:alias>', redirect_view)
+    path('', view.home_view),
+    path('shorten', view.shorten_url),
+    path('popular/', view.popular_links_view),
+    path('<str:alias>', view.redirect_view)
 ]
