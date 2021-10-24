@@ -26,6 +26,8 @@ h3 {
 }
 
 a {
+    color: #463079;
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -68,6 +70,12 @@ a {
 
 .card h2 {
     text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 1rem 0;
 }
 
 @media (min-width: 600px) {
