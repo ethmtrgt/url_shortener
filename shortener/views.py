@@ -32,6 +32,10 @@ def redirect_view(request, alias):
     return HttpResponseRedirect('/')
 
 def popular_links_view(request):
+    """
+    Order URLs by their visit count
+    Render the page of popular URLs
+    """
     short_urls = ShortUrl.objects.order_by('-visits')[0:10]
     return render(request, 'popular.html', {'short_urls': enumerate(short_urls, 1)})
 
